@@ -19,4 +19,17 @@ This project provides a **drag-and-drop Scrum-style sprint board** for managing 
 
 ---
 
+📋 Board Sections
+Each workstream (Development and Design) includes the following columns:
 
+Backlog – Ideas and unstarted tasks
+
+To Do – Tasks ready to be worked on
+
+In Progress – Actively being developed or designed
+
+Review – Under code/design review
+
+Testing – QA and bug fixing
+
+Done – Completed tasks
