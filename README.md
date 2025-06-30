@@ -1,5 +1,4 @@
 
-```markdown
 # 🍲 Recipe Management App - Sprint Board
 
 This project provides a **drag-and-drop Scrum-style sprint board** for managing the development and design tasks of a **Recipe Management Application**. Built entirely with **HTML, CSS, and JavaScript**, this tool helps teams visually track progress, prioritize tasks, and manage work across different stages: Backlog, To Do, In Progress, Review, Testing, and Done.
@@ -25,12 +24,10 @@ This project provides a **drag-and-drop Scrum-style sprint board** for managing 
 
 ## 📂 File Structure
 
-```
 
 📁 project-root/
 └── index.html  # Main HTML file containing the full app
 
-````
 
 ---
 
@@ -41,8 +38,8 @@ You can run this project locally by following these steps:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/recipe-sprint-board.git
-cd recipe-sprint-board
+git clone https://github.com/HneenAlshelaly/RecipeManagementApp_SprintBoard.git
+cd RecipeManagementApp_SprintBoard
 ````
 
 ### 2. Open `index.html`
@@ -127,17 +124,5 @@ This project is open-source under the [MIT License](LICENSE).
 
 ## 💻 Author
 
-Made with ❤️ by [Your Name](https://github.com/your-username)
+Made with ❤️ by [Hneen](https://github.com/HneenAlshelaly) and [Shahad](https://github.com/shahadfaiz)
 
-```
-
----
-
-### ✅ After You Paste It
-
-- Replace `your-username` with your GitHub username.
-- Add a real **live demo link** if you deploy it (e.g., with GitHub Pages).
-- Optional: Add screenshots in a `/screenshots` folder and embed them in the `README`.
-
-Would you like me to help you deploy it on GitHub Pages too?
-```
