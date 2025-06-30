@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App Scrum Board - Dev & Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+
+        .board-title {
+            text-align: center;
+            color: #1a1a1a;
+            margin: 20px 0;
+            font-size: 24px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #1a1a1a;
+            padding: 10px 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .board {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            overflow-x: auto;
+            min-height: 400px;
+        }
+
+        .column {
+            background: #ebecf0;
+            border-radius: 10px;
+            min-width: 300px;
+            max-width: 300px;
+            padding: 15px;
+            height: fit-content;
+        }
+
+        .column-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #172b4d;
+        }
+
+        .task {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: move;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            transition: transform 0.2s ease;
+        }
+
+        .task:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+
+        .task.dragging {
+            opacity: 0.5;
+        }
+
+        .task-title {
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #172b4d;
+        }
+
+        .task-priority {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .priority-high {
+            background-color: #ffebe6;
+            color: #ff5630;
+        }
+
+        .priority-medium {
+            background-color: #fffae6;
+            color: #ffab00;
+        }
+
+        .priority-low {
+            background-color: #e3fcef;
+            color: #36b37e;
+        }
+
+        .add-task-btn {
+            width: 100%;
+            padding: 10px;
+            background: none;
+            border: 2px dashed #dfe1e6;
+            border-radius: 5px;
+            color: #172b4d;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .add-task-btn:hover {
+            background: #dfe1e6;
+        }
+
+        .separator {
+            height: 2px;
+            background: #dfe1e6;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .board {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .column {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="board-title">Recipe Management App - Sprint Board</h1>
+
+
+
+    <!-- Previous code remains the same until the Development Section tasks -->
+
+<!-- Development Section -->
+<div class="section">
+    <h2 class="section-title">Development</h2>
+    <div class="board">
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">Backlog</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task1">
+                <div class="task-title">User Authentication System</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task2">
+                <div class="task-title">Recipe API Integration</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task3">
+                <div class="task-title">Social Media Integration</div>
+                <span class="task-priority priority-medium">Medium Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task4">
+                <div class="task-title">Recipe Recommendation Engine</div>
+                <span class="task-priority priority-medium">Medium Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task5">
+                <div class="task-title">Meal Planning Calendar</div>
+                <span class="task-priority priority-low">Low Priority</span>
+            </div>
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">To Do</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task6">
+                <div class="task-title">Database Setup</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task7">
+                <div class="task-title">Recipe Search Functionality</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task8">
+                <div class="task-title">User Profile Management</div>
+                <span class="task-priority priority-medium">Medium Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task9">
+                <div class="task-title">Recipe Rating System</div>
+                <span class="task-priority priority-medium">Medium Priority</span>
+            </div>
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">In Progress</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task10">
+                <div class="task-title">User Registration Flow</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task11">
+                <div class="task-title">Recipe CRUD Operations</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task12">
+                <div class="task-title">Comments System</div>
+                <span class="task-priority priority-medium">Medium Priority</span>
+            </div>
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">Review</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-review3">
+    <div class="task-title">Code Review: Comments System</div>
+    <span class="task-priority priority-medium">Medium Priority</span>
+</div>
+<div class="task" draggable="true" ondragstart="drag(event)" id="dev-review4">
+    <div class="task-title">Security Review: User Authentication</div>
+    <span class="task-priority priority-high">High Priority</span>
+</div>
+<div class="task" draggable="true" ondragstart="drag(event)" id="dev-review5">
+    <div class="task-title">Review Recipe Recommendation Logic</div>
+    <span class="task-priority priority-medium">Medium Priority</span>
+</div>
+
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+
+
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">Testing</h2>
+          <div class="task" draggable="true" ondragstart="drag(event)" id="dev-test3">
+    <div class="task-title">Unit Testing: Recipe Search</div>
+    <span class="task-priority priority-high">High Priority</span>
+</div>
+<div class="task" draggable="true" ondragstart="drag(event)" id="dev-test4">
+    <div class="task-title">Integration Testing: Meal Planning Calendar</div>
+    <span class="task-priority priority-low">Low Priority</span>
+</div>
+<div class="task" draggable="true" ondragstart="drag(event)" id="dev-test5">
+    <div class="task-title">Bug Fix Verification: Profile Update</div>
+    <span class="task-priority priority-medium">Medium Priority</span>
+</div>
+
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">Done</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task13">
+                <div class="task-title">Project Setup</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task14">
+                <div class="task-title">Development Environment</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="dev-task15">
+                <div class="task-title">Basic Router Setup</div>
+                <span class="task-priority priority-medium">Medium Priority</span>
+            </div>
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+    </div>
+</div>
+
+<!-- Design Section -->
+<div class="section">
+    <h2 class="section-title">Design</h2>
+    <div class="board">
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">Backlog</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task1">
+                <div class="task-title">Recipe Card Design</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task2">
+                <div class="task-title">Color Palette</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task3">
+                <div class="task-title">Dark Mode Design</div>
+                <span class="task-priority priority-low">Low Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task4">
+                <div class="task-title">Email Template Designs</div>
+                <span class="task-priority priority-low">Low Priority</span>
+            </div>
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">To Do</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task5">
+                <div class="task-title">User Profile UI</div>
+                <span class="task-priority priority-medium">Medium Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task6">
+                <div class="task-title">Search Results Layout</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task7">
+                <div class="task-title">Recipe Creation Form</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task8">
+                <div class="task-title">Mobile Navigation</div>
+                <span class="task-priority priority-medium">Medium Priority</span>
+            </div>
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">In Progress</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task9">
+                <div class="task-title">Homepage Layout</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task10">
+                <div class="task-title">Icon Set Design</div>
+                <span class="task-priority priority-medium">Medium Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task11">
+                <div class="task-title">Loading Animations</div>
+                <span class="task-priority priority-low">Low Priority</span>
+            </div>
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+
+
+
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">Review</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-review3">
+    <div class="task-title">Design Review: Recipe Card</div>
+    <span class="task-priority priority-high">High Priority</span>
+</div>
+<div class="task" draggable="true" ondragstart="drag(event)" id="design-review4">
+    <div class="task-title">UI Review: Mobile Navigation</div>
+    <span class="task-priority priority-medium">Medium Priority</span>
+</div>
+<div class="task" draggable="true" ondragstart="drag(event)" id="design-review5">
+    <div class="task-title">Typography & Accessibility Check</div>
+    <span class="task-priority priority-low">Low Priority</span>
+</div>
+
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+
+            <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">Testing</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-test3">
+    <div class="task-title">Cross-browser UI Testing</div>
+    <span class="task-priority priority-high">High Priority</span>
+</div>
+<div class="task" draggable="true" ondragstart="drag(event)" id="design-test4">
+    <div class="task-title">Click Path Testing: Search Flow</div>
+    <span class="task-priority priority-medium">Medium Priority</span>
+</div>
+<div class="task" draggable="true" ondragstart="drag(event)" id="design-test5">
+    <div class="task-title">Color Contrast Accessibility Check</div>
+    <span class="task-priority priority-low">Low Priority</span>
+</div>
+
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+
+                <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2 class="column-title">Done</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task12">
+                <div class="task-title">Logo Design</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task13">
+                <div class="task-title">Typography Selection</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task14">
+                <div class="task-title">Basic Style Guide</div>
+                <span class="task-priority priority-medium">Medium Priority</span>
+            </div>
+            <div class="task" draggable="true" ondragstart="drag(event)" id="design-task15">
+                <div class="task-title">Initial Wireframes</div>
+                <span class="task-priority priority-high">High Priority</span>
+            </div>
+            <button class="add-task-btn">+ Add Task</button>
+        </div>
+    </div>
+</div>
+
+<!-- Rest of the code remains the same -->
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+            ev.target.classList.add('dragging');
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var draggedElement = document.getElementById(data);
+            draggedElement.classList.remove('dragging');
+            
+            let targetColumn = ev.target;
+            while (targetColumn && !targetColumn.classList.contains('column')) {
+                targetColumn = targetColumn.parentElement;
+            }
+            
+            if (targetColumn) {
+                const addTaskBtn = targetColumn.querySelector('.add-task-btn');
+                targetColumn.insertBefore(draggedElement, addTaskBtn);
+            }
+        }
+
+        document.querySelectorAll('.add-task-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const taskName = prompt('Enter task name:');
+                if (taskName) {
+                    const priority = prompt('Enter priority (high, medium, or low):').toLowerCase();
+                    const section = button.closest('.section').querySelector('.section-title').textContent.toLowerCase();
+                    const newTask = document.createElement('div');
+                    newTask.className = 'task';
+                    newTask.draggable = true;
+                    newTask.id = `${section}-task-${Date.now()}`;
+                    newTask.ondragstart = drag;
+                    
+                    newTask.innerHTML = `
+                        <div class="task-title">${taskName}</div>
+                        <span class="task-priority priority-${priority}">${priority.charAt(0).toUpperCase() + priority.slice(1)} Priority</span>
+                    `;
+                    
+                    button.parentElement.insertBefore(newTask, button);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
