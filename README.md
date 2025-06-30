@@ -3,11 +3,6 @@
 
 This project provides a **drag-and-drop Scrum-style sprint board** for managing the development and design tasks of a **Recipe Management Application**. Built entirely with **HTML, CSS, and JavaScript**, this tool helps teams visually track progress, prioritize tasks, and manage work across different stages: Backlog, To Do, In Progress, Review, Testing, and Done.
 
----
-
-## 🔥 Live Demo
-
-> (Optional: Add your GitHub Pages link or live deployment link here)
 
 ---
 
@@ -106,7 +101,7 @@ The new task will appear instantly and can be dragged across the board.
 
 ## 📸 Screenshots
 
-> Add screenshots or GIFs of your sprint board in action here!
+<img width="976" alt="Screenshot 2025-06-30 at 1 57 09 PM" src="https://github.com/user-attachments/assets/25a5ad37-2384-4af6-b629-0127dbcf5597" />
 
 ---
 
