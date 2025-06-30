@@ -17,9 +17,9 @@ This project provides a **drag-and-drop Scrum-style sprint board** for managing 
 
 ---
 
-project-root/
-├── index.html          # Main HTML file
+📁 project-root/
 
+└── index.html  # Main HTML file containing the full app
 ---
 
 ## 🚀 Getting Started
