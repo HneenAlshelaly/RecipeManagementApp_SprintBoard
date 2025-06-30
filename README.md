@@ -4,10 +4,8 @@ This project provides a **drag-and-drop Scrum-style sprint board** for managing 
 
 ---
 
-## 🔥 Live Demo
-
-> (Optional: Add your GitHub Pages link or live deployment link here)
-
+## 🔥 Sprint Board Sample
+![image](https://github.com/user-attachments/assets/72743c44-d852-4524-aea6-45877928551c)
 ---
 
 ## 🧩 Features
@@ -21,5 +19,4 @@ This project provides a **drag-and-drop Scrum-style sprint board** for managing 
 
 ---
 
-## 📂 File Structure
 
